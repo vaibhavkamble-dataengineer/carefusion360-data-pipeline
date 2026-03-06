@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+
+# Spark output
+*.parquet
+*.crc
+_SUCCESS
+
+# Data files
+raw_data/
+gold/
+silver/
+bronze/
+
+# Logs
+logs/
+
+# VSCode
+.vscode/
+
+# OS
+.DS_Store
