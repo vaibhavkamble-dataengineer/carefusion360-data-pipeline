@@ -1,0 +1,24 @@
+Correct Fix (Use Virtual Environment)
+
+Inside /mnt/c/carefusion360/data_generators run:
+
+python3 -m venv venv
+
+
+Then activate it:
+
+source venv/bin/activate
+
+python generate_webapi_data.py
+
+http://localhost:5000/events
+
+airflow-pass = XEUfhcQyBdyBxNFP
+
+Start:
+
+cd ~/airflow
+source ~/airflow/airflow_venv/bin/activate
+airflow standalone
+
+

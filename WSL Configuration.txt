@@ -1,0 +1,109 @@
+🚀 STEP 1 — Install Java (Spark depends on it)
+
+We start with Java.
+
+In Ubuntu (WSL terminal), run:
+
+sudo apt update
+
+
+Then:
+
+sudo apt install openjdk-11-jdk -y
+
+
+Why Java 11?
+Because Spark 3.5 works perfectly with Java 11. Stable. No drama.
+
+✅ After Install — Verify
+
+Run:
+
+java -version
+
+
+You should see something like:
+
+openjdk version "11.x.x"
+
+=========================================================================================
+
+🚀 STEP 2 — Install Python (Clean & Controlled)
+
+Ubuntu usually has Python, but we don’t trust “usually”. We verify and install properly.
+
+1️⃣ Check existing version
+
+Run:
+
+python3 --version
+
+
+If it shows 3.10+ → good.
+If not → we install.
+
+Now we just make sure pip + venv tools are properly installed.
+
+Run this:
+
+sudo apt install python3-pip python3-venv -y
+
+
+Then upgrade pip:
+
+python3 -m pip install --upgrade pip
+
+
+After that, confirm:
+
+pip3 --version
+
+headaches
+
+🚀 STEP 3 — Create Project Environment (Clean Way)
+1️⃣ Create a workspace folder
+mkdir -p ~/de_projects
+cd ~/de_projects
+
+2️⃣ Create a virtual environment
+python3 -m venv de_env
+
+3️⃣ Activate it
+source de_env/bin/activate
+
+
+You should now see something like:
+
+(de_env) luffy@VaibhavKamble:~/de_projects$
+
+
+That means you're inside isolated Python.
+
+4️⃣ Now upgrade pip (this time it will work)
+pip install --upgrade pip
+
+
+No error now.
+
+After this say:
+
+venv activated
+
+======================================================================
+
+🚀 STEP 4 — Install PySpark 3.5.x (Clean Way)
+
+Since you're inside (de_env) already, run:
+
+pip install pyspark==3.5.1
+
+
+=========================================================================
+
+🚀 STEP 5 — VS Code + WSL Integration (Clean Setup)
+
+
+
+
+cd ~/de_projects
+source de_env/bin/activate
